@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://igoefsb87quv"]
 
 [ext_resource type="Script" uid="uid://dg64qb0yrt6jk" path="res://main.gd" id="1_bd3hy"]
+[ext_resource type="AudioStream" uid="uid://v1dbgdby441y" path="res://song-s47rr6qA6gbHF2uZz6WY.mp3" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://k675erhwp42j" path="res://h_slider.gd" id="2_h2yge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhfbf"]
 bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
@@ -132,8 +134,15 @@ theme_override_styles/grabber_area = SubResource("StyleBoxLine_sb8i5")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_sb8i5")
 min_value = 50.0
 value = 50.0
+script = ExtResource("2_h2yge")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=910051707]
+stream = ExtResource("2_0xm2m")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Panel/Label/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="value_changed" from="Panel/HSlider" to="Panel/HSlider" method="_on_value_changed"]
