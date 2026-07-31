@@ -70,10 +70,6 @@ offset_top = 94.0
 offset_right = -142.0
 offset_bottom = 114.0
 
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1126132092]
-position = Vector2(-745, 348)
-texture = ExtResource("1_uwcw8")
-
 [node name="ChoiceScreen" type="Control" parent="CanvasLayer" unique_id=1521094035]
 layout_mode = 3
 anchors_preset = 0
