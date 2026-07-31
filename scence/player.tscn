@@ -17,22 +17,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7b7a"]
 size = Vector2(127, 125)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjc1j"]
-bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
-
 [node name="player" type="CharacterBody2D" unique_id=123168238 node_paths=PackedStringArray("btn_1", "btn_2")]
 script = ExtResource("1_mjc1j")
 max_uses_before_critical = 6
 double_jump_boost_multiplier = 0.4
-btn_1 = NodePath("")
-btn_2 = NodePath("")
+btn_1 = NodePath("CanvasLayer/ChoiceScreen/ButtonsContainer/Btn1")
+btn_2 = NodePath("CanvasLayer/ChoiceScreen/ButtonsContainer/Btn2")
 icon_double_jump = ExtResource("1_uwcw8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1736156332]
@@ -85,10 +75,10 @@ offset_bottom = 289.0
 [node name="ButtonsContainer" type="VBoxContainer" parent="CanvasLayer/ChoiceScreen" unique_id=821666585]
 process_mode = 3
 layout_mode = 0
-offset_left = 370.00006
-offset_top = 4.577713
-offset_right = 470.00006
-offset_bottom = 93.57771
+offset_left = 78.000015
+offset_top = -41.0
+offset_right = 158.00002
+offset_bottom = 56.0
 scale = Vector2(1.8925664, 1.5192571)
 
 [node name="Label" type="Label" parent="CanvasLayer/ChoiceScreen/ButtonsContainer" unique_id=949152064]
@@ -98,24 +88,8 @@ layout_mode = 2
 layout_mode = 2
 color = Color(0.49145234, 1.0874466, 0.9732144, 0.4745098)
 
-[node name="Btn4" type="Button" parent="CanvasLayer/ChoiceScreen/ButtonsContainer" unique_id=825617027]
-texture_filter = 1
+[node name="Btn1" type="Button" parent="CanvasLayer/ChoiceScreen/ButtonsContainer" unique_id=545403579]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 19
-theme_override_styles/normal = SubResource("StyleBoxFlat_mjc1j")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mjc1j")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mjc1j")
-text = "Options"
 
-[node name="Btn3" type="Button" parent="CanvasLayer/ChoiceScreen/ButtonsContainer" unique_id=1161592442]
-texture_filter = 1
+[node name="Btn2" type="Button" parent="CanvasLayer/ChoiceScreen/ButtonsContainer" unique_id=1282214830]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 19
-theme_override_styles/normal = SubResource("StyleBoxFlat_mjc1j")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mjc1j")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mjc1j")
-text = "start game"
