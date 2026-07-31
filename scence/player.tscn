@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://ci8uk63xmwjx1" path="res://script/player.gd" id="1_mjc1j"]
 [ext_resource type="Texture2D" uid="uid://dhxme4qgbpijm" path="res://hello/icon.svg" id="1_uwcw8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7b7a"]
-size = Vector2(127, 125)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_gyc6d"]
 animations = [{
 "frames": [{
@@ -17,6 +14,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7b7a"]
+size = Vector2(127, 125)
+
 [node name="player" type="CharacterBody2D" unique_id=123168238 node_paths=PackedStringArray("btn_1", "btn_2")]
 script = ExtResource("1_mjc1j")
 max_uses_before_critical = 6
@@ -25,19 +25,13 @@ btn_1 = NodePath("CanvasLayer/ChoiceScreen/ButtonsContainer/Btn1")
 btn_2 = NodePath("CanvasLayer/ChoiceScreen/ButtonsContainer/Btn2")
 icon_double_jump = ExtResource("1_uwcw8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781926273]
-position = Vector2(1.5, -0.5)
-shape = SubResource("RectangleShape2D_g7b7a")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1736156332]
 sprite_frames = SubResource("SpriteFrames_gyc6d")
 animation = &"idle"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1891019650]
-position = Vector2(224, -83)
-zoom = Vector2(1.3, 1.3)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781926273]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_g7b7a")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1116387592]
 
